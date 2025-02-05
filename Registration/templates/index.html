@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harey</title>
+    
+</head>
+<body>
+    {% with firstname="Muhammad Ali"  secname="Fatimah"  %}
+    
+    <h1>Welcome {{ firstname }}, how are you? {{ secname }} {{ fathername }}</h1>
+    
+    {% endwith %}
+    {% if greeting == 1 %}
+    <h1>hello</h1>
+    {% endif %}
+    <a href="{% url 'course'%}"> Course</a> 
+    <a href="{%url 'mentor'%}"> Mentor</a>
+    <a href="{%url 'search'%}"> Search</a>
+    <a href="{%url 'searchM'%}"> SearchM</a>
+
+</body>
+</html>

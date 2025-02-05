@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <h1>Welcome to KPMIM</h1>
+</head>
+<body>
+    <strong>SEARCH Mentor</strong>
+    <form action="" method="get">
+        Enter mentorCd : <input type="text" name="m_code">
+    <input type="submit" value="SEARCH"> 
+    </form>
+    <table border = "1">
+        <th>mentorCd</th><th>mentorName</th><th>mentorEmail</th>
+
+    {% for x in data %}
+    <tr>
+        <td>{{ x.mentorCd }}</td>
+        <td>{{ x.mentorName }}</td>
+        <td>{{ x.mentorEmail }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    
+</body>
+<a href="{% url 'index'%}">BACK TO HOMEPAGE</a>
+</html>
